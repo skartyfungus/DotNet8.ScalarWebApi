@@ -7,12 +7,10 @@ using Microsoft.OpenApi.Models;
 using BCrypt.Net;
 using System.Text;
 
-namespace BankApi
-{
-    var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-    // Configure DbContext for PostgreSQL
-    builder.Services.AddDbContext<BankDbContext>(options =>
+// Configure DbContext for PostgreSQL
+builder.Services.AddDbContext<BankDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configure JWT Authentication
@@ -61,5 +59,3 @@ app.MapControllers();
 
 // Run the application
 app.Run();
-
-}

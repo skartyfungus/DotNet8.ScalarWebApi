@@ -1,9 +1,7 @@
-namespace BankApi.Models
+public class User
 {
-    public class User
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public decimal Balance { get; set; }
-    }
-}   
+    public int Id { get; set; }
+    public required string Username { get; set; }  // Required modifier for non-nullable properties
+    public required string PasswordHash { get; set; } // Required modifier for non-nullable properties
+    public decimal Balance { get; set; }
+}
