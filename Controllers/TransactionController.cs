@@ -1,8 +1,8 @@
+using Microsoft.AspNetCore.Mvc;
 [Route("api/transactions")]
 [ApiController]
 public class TransactionsController : ControllerBase
 {
-    using Microsoft.AspNetCore.Mvc;
     private readonly BankDbContext _context;
 
     public TransactionsController(BankDbContext context)
@@ -41,6 +41,7 @@ public class TransactionsController : ControllerBase
     }
 }
 
+// TransferRequest model
 public class TransferRequest
 {
     public int FromUserId { get; set; }

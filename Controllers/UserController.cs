@@ -1,8 +1,8 @@
+using Microsoft.AspNetCore.Mvc;
 [Route("api/users")]
 [ApiController]
 public class UsersController : ControllerBase
 {
-    using Microsoft.AspNetCore.Mvc;
     private readonly BankDbContext _context;
 
     public UsersController(BankDbContext context)
