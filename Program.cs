@@ -1,8 +1,11 @@
 using Scalar.AspNetCore;
 
 using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using BCrypt.Net;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
